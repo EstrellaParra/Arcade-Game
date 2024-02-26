@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1 class="neon-text">Arcade</h1>
+    <h1 class="neon-text">Arkanoid</h1>
     <button id="startButton">Start Game</button>
     <canvas></canvas>
 
@@ -30,8 +30,8 @@
     let x = canvas.width / 2;
     let y = canvas.height - 65;
     //velocidad de la pelota
-    let dx = 5;
-    let dy = -5;
+    let dx = 6;
+    let dy = -6;
 
     /*Variables de la paleta*/
     const paddleHeight = 20;
@@ -76,7 +76,7 @@
       }
     }
 
-    const PADDLE_SENSITIVITY = 10;
+    const PADDLE_SENSITIVITY = 12;
 
     function drawBall() {
       ctx.beginPath();

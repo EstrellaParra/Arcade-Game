@@ -58,26 +58,3 @@ canvas {
 #startButton:hover {
   background-color: #30696b;
 }
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-#moveLeftButton,
-#moveRightButton {
-  background-color: #42868f;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  margin-left: 3rem;
-  cursor: pointer;
-  border-radius: 5px;
-}

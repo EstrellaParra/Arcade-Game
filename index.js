@@ -66,10 +66,12 @@ function drawBall() {
   ctx.fill();
   ctx.closePath();
 }
+
 function drawPaddle() {
   ctx.fillStyle = "whitesmoke";
   ctx.fillRect(paddleX, paddleY, paddleWidth, paddleHeight);
 }
+
 function drawBricks() {
   for (let c = 0; c < brickColumnCount; c++) {
     for (let r = 0; r < brickRowCount; r++) {
@@ -115,6 +117,7 @@ function collisionDetection() {
     }
   }
 }
+
 function ballMovement() {
   //rebotar en los laterales
   if (
@@ -151,6 +154,7 @@ function ballMovement() {
   x += dx;
   y += dy;
 }
+
 function paddleMovement() {
   if (rightPressed && paddleX < canvas.width - paddleWidth) {
     paddleX += PADDLE_SENSITIVITY;
@@ -161,6 +165,26 @@ function paddleMovement() {
 
 function cleanCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+const vw = document.body.clientWidth;
+const isMobile = vw <= 768;
+const lBtn = document.getElementById("left");
+const rBtn = document.getElementById("right");
+
+if (isMobile) {
+  lBtn.addEventListener("click", () => {
+    rightPressed = false;
+    leftPressed = true;
+  });
+
+  rBtn.addEventListener("click", () => {
+    leftPressed = false;
+    rightPressed = true;
+  });
+} else {
+  lBtn.style.display = "none";
+  rBtn.style.display = "none";
 }
 
 function initEvents() {

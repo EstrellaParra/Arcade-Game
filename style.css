@@ -43,22 +43,32 @@ canvas {
 }
 
 #startButton {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 540px;
+}
+
+button {
   background-color: #42868f;
   border: none;
   color: white;
+  font-size: 14px;
   padding: 10px 20px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin-top: 1rem;
-  margin-left: 2rem;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
-#startButton:hover {
+button :hover {
   background-color: #30696b;
 }
